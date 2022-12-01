@@ -1,14 +1,22 @@
 @import url(./global.css);
 
 body{
-    background-color: #f6f8fc;
+    background-color: #0e0e0f;
+    background-image: url(/assets/espaco2.jpg);
+    background-blend-mode: soft-light;
+   
 }
 
 .content{
+    margin-top: 50px;
     width: 100vw;
     height: 100vh;
     padding: 1rem;
-    background-color: #fff;
+    background-image: url(/assets/espaco2.jpg);
+    background-size: auto;
+    background-color: #0e0e0f;
+    background-blend-mode: hard-light;
+    color: white;
     
 }
 
@@ -43,7 +51,7 @@ body{
     margin: .5rem;
     padding: 2rem 1rem;
     border-radius: 1rem;
-    background-color: #0e0e0e;
+    background-color: #5f6063;
     color: white;    
 }
 .person .detail{
