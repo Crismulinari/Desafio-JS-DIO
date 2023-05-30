@@ -45,6 +45,7 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
+
 .person {
     display: flex;
     flex-direction: column;
@@ -78,6 +79,7 @@ body{
     height: 100px;
     align-self: flex-end;
 }
+
 .pagination{
     display: flex;
     flex-direction: row;
@@ -100,6 +102,101 @@ body{
     color: #3b3232; 
 }
 .person .name{
+    color: rgb(218, 196, 196);
+    margin-bottom: 0;
+}
+
+/* The Modal (background) */
+.ebcf_modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    
+}
+
+/* Modal Content */
+.ebcf_modal-content {
+    background-color: #3b3232;
+    background-image: url(../images/imperio.jpg);
+    background-size: 100%;
+    margin: auto;
+    padding: 20px;      
+    width: 80%;
+    height: 100%;
+    border-radius: 2px;
+    cursor: pointer;
+}
+
+/* The Close Button */
+.ebcf_close {
+    color: rgb(0,0,0);
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    
+}
+
+.ebcf_close:hover,
+.ebcf_close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+.personaUnit {
+    display: flex;    
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    margin: .5rem;
+    padding: 2rem 1rem;
+    border-radius: 1rem;
+    
+    font-size: 1.5rem;
+    color: white;  
+}
+.personaUnit .detail{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    
+}
+.personaUnit .detail .referens{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+.personaUnit .detail .referens .referen{
+   background-color: #3b3232;
+   color: rgb(218, 196, 196);
+   padding: .5rem 1rem;
+   margin: .5rem 0;
+   font-size: 1rem;
+   border-radius: 1rem;
+}
+.personaUnit .detail img{
+    max-width: 140px;
+    height: 190px;
+    align-self: flex-end;
+}
+.personaUnit .number{
+    text-align: right;
+    color: #3b3232; 
+}
+.personaUnit .name{
     color: rgb(218, 196, 196);
     margin-bottom: 0;
 }

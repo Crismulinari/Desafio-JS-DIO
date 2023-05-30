@@ -1,14 +1,41 @@
 const personList = document.getElementById("personsList")
-const loadMoreButton = document.getElementById('loadMoreButton')
+const personUnit = document.getElementById("personUnit")
+
 const limit = 5;
 let offset = 0;
+loadPersonItens(offset, limit)
 
-function loadPersonItens(offset, limit){
+function loadModals(person) {   
+
+    var ebModal = document.getElementById(`${person.id}SummaryModal`);
+    var ebBtn = document.getElementById(`${person.id}Summary`);
+    var ebSpan = document.getElementsByClassName(`${person.id}ebcf_close`)[0];
+    
+    ebBtn.onclick = function() {
+        ebModal.style.display = "block";
+    }
+    
+    ebSpan.onclick = function() {
+        ebModal.style.display = "none";
+    }
+    
+    window.onclick = function(event) {
+        if (event.target == ebModal) {
+            ebModal.style.display = "none";
+        }
+    }
+
+}
+
+
+function loadPersonItens(offset, limit){  
     starWarApi.getPersons (offset, limit).then((persons = []) => {  
-        const newHtml = persons.map((person) =>  `
+        const newHtml = persons
+        .map((person) =>
+          `
             <li class="person">            
-                <span class="name">${person.name}</span>
-                <span class="number">homeworld: ${person.homeworld}</span>
+                <span class="name">${person.name}</span> 
+                <a href="#" id="${person.id}Summary">Detail</a>              
                 <div class="detail">
                     <ol class="referens">
                         <li class="referen">height: ${person.height}</li>
@@ -19,20 +46,38 @@ function loadPersonItens(offset, limit){
                     <img src="${person.image}"
                         alt="${person.name}">
                 </div>
+                <div id="${person.id}SummaryModal" class="ebcf_modal">
+				  <div class="ebcf_modal-content">
+					<span class="${person.id}ebcf_close">&times;</span>
+                    <div class="personaUnit id="personaModal">        
+                        <span class="name">${person.name}</span>                
+                        <div class="detail">
+                            <ol class="referens">
+                                <li class="referen">height: ${person.height}</li>
+                                <li class="referen">mass: ${person.mass}</li>
+                                <li class="referen">gender: ${person.gender}</li>
+                                <li class="referen">species: ${person.species}</li>
+                            </ol>
+                            <ol class="referens">
+                                <li class="referen">homeworld: tatooine</li>
+                                <li class="referen">wiki: ${person.wiki}</li>
+                                <li class="referen">diedLocation: ${person.diedLocation}</li>
+                                <li class="referen">affiliations: ${person.affiliations[0]}</li>
+                            </ol>
+                            <img src="${person.image}"
+                        alt="${person.id}">
+                        </div>
+                        </div>     
+				  </div>
+
+				</div>
             </li>
-        `).join('') 
-        personList.innerHTML += newHtml   
-    })
+        `)
+        .join('');
+
+        
+
+        personList.innerHTML += newHtml   
+        persons.forEach((person) => loadModals(person));
+    })
 }
-
-loadPersonItens(offset, limit)
-
-loadMoreButton.addEventListener('click', () => {
-    offset += limit
-    loadPersonItens(offset, limit)
-})
-    
-    
-    
-    
-   
