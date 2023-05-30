@@ -35,7 +35,7 @@ function loadPersonItens(offset, limit){
           `
             <li class="person">            
                 <span class="name">${person.name}</span> 
-                <a href="#" id="${person.id}Summary">Detail</a>              
+                <a href="#" class="model" id="${person.id}Summary">Detail</a>              
                 <div class="detail">
                     <ol class="referens">
                         <li class="referen">height: ${person.height}</li>
@@ -47,28 +47,28 @@ function loadPersonItens(offset, limit){
                         alt="${person.name}">
                 </div>
                 <div id="${person.id}SummaryModal" class="ebcf_modal">
-				  <div class="ebcf_modal-content">
-					<span class="${person.id}ebcf_close">&times;</span>
-                    <div class="personaUnit id="personaModal">        
-                        <span class="name">${person.name}</span>                
-                        <div class="detail">
-                            <ol class="referens">
-                                <li class="referen">height: ${person.height}</li>
-                                <li class="referen">mass: ${person.mass}</li>
-                                <li class="referen">gender: ${person.gender}</li>
-                                <li class="referen">species: ${person.species}</li>
-                            </ol>
-                            <ol class="referens">
-                                <li class="referen">homeworld: tatooine</li>
-                                <li class="referen">wiki: ${person.wiki}</li>
-                                <li class="referen">diedLocation: ${person.diedLocation}</li>
-                                <li class="referen">affiliations: ${person.affiliations[0]}</li>
-                            </ol>
+                    <div class="ebcf_modal-content">
+                        <span class="${person.id}ebcf_close">&times;</span>
+                        <div class="personaUnit id="personaModal">        
+                            <span class="name">${person.name}</span> 
                             <img src="${person.image}"
-                        alt="${person.id}">
-                        </div>
+                                alt="${person.id}">               
+                            <div class="detail">
+                                <ol class="referens">
+                                    <li class="referen">height: ${person.height}</li>
+                                    <li class="referen">mass: ${person.mass}</li>
+                                    <li class="referen">gender: ${person.gender}</li>
+                                    <li class="referen">species: ${person.species}</li>
+                                </ol>
+                                <ol class="referens">
+                                    <li class="referen">homeworld: tatooine</li>
+                                    <li class="referen">wiki: ${person.wiki}</li>
+                                    <li class="referen">diedLocation: ${person.diedLocation}</li>
+                                    <li class="referen">affiliations: ${person.affiliations[0]}</li>
+                                </ol>                                
+                            </div>
                         </div>     
-				  </div>
+                    </div>
 
 				</div>
             </li>

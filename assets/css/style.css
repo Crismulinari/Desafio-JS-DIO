@@ -24,7 +24,7 @@ body{
     .content{
         max-width: 992px;
         height: auto;
-        margin: 1rem auto;
+        margin: 1rem auto;       
     }
 }
 
@@ -106,6 +106,7 @@ body{
     margin-bottom: 0;
 }
 
+
 /* The Modal (background) */
 .ebcf_modal {
     display: none; /* Hidden by default */
@@ -135,6 +136,7 @@ body{
     cursor: pointer;
 }
 
+
 /* The Close Button */
 .ebcf_close {
     color: rgb(0,0,0);
@@ -151,33 +153,37 @@ body{
     cursor: pointer;
 }
 .personaUnit {
-    display: flex;    
+    display: flex;   
+    flex-direction: row; 
     align-items: center;
+    justify-content: center;    
     width: 100%;
-    height: 100%;
-    
-    display: flex;
-    flex-direction: column;
+    height: 100%;        
     margin: .5rem;
-    padding: 2rem 1rem;
-    border-radius: 1rem;
-    
+    padding: 2rem 1rem;        
     font-size: 1.5rem;
     color: white;  
+}
+.personaUnit img{
+    max-width: 140px;
+    height: 190px;
+    
 }
 .personaUnit .detail{
     width: 100%;
     height: 100%;
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
     justify-content: space-between;
     
 }
+
 .personaUnit .detail .referens{
     padding: 0;
     margin: 0;
     list-style: none;
+    align-self: flex-end;
 }
 .personaUnit .detail .referens .referen{
    background-color: #3b3232;
@@ -187,11 +193,7 @@ body{
    font-size: 1rem;
    border-radius: 1rem;
 }
-.personaUnit .detail img{
-    max-width: 140px;
-    height: 190px;
-    align-self: flex-end;
-}
+
 .personaUnit .number{
     text-align: right;
     color: #3b3232; 
