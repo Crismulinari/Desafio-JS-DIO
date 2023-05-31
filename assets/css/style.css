@@ -125,6 +125,8 @@ body{
 
 /* Modal Content */
 .ebcf_modal-content {
+    display: flex;
+    flex-direction: column;
     background-color: #3b3232;
     background-image: url(../images/imperio.jpg);
     background-size: 100%;
@@ -133,9 +135,14 @@ body{
     width: 70%;
     height: 100%;
     border-radius: 2px;
-    cursor: pointer;
+    
     color: white;    
     font-size: 1.5rem;
+}
+.ebcf_modal-content a{
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
 }
 
 

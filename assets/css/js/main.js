@@ -50,6 +50,7 @@ function loadPersonItens(offset, limit){
                     <div class="ebcf_modal-content">
                         <span class="${person.id}ebcf_close">&times;</span>
                         <span class="name">${person.name}</span>
+                        <a href="${person.wiki}" class="data">${person.wiki}</a>
                         <div class="personaUnit id="personaModal">                             
                             <img src="${person.image}"
                                 alt="${person.id}">               
@@ -62,7 +63,6 @@ function loadPersonItens(offset, limit){
                                 </ol>
                                 <ol class="referens">
                                     <li class="referen">homeworld: tatooine</li>
-                                    <li class="referen">wiki: ${person.wiki}</li>
                                     <li class="referen">diedLocation: ${person.diedLocation}</li>
                                     <li class="referen">affiliations: ${person.affiliations[0]}</li>
                                 </ol>                                
