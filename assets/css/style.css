@@ -112,7 +112,7 @@ body{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
+    padding: auto; /* Location of the box */    
     left: 15%;
     top: 0;
     width: 70%; /* Full width */
