@@ -50,7 +50,7 @@ function loadPersonItens(offset, limit){
                     <div class="ebcf_modal-content">
                         <span class="${person.id}ebcf_close">&times;</span>
                         <span class="name">${person.name}</span>
-                        <a href="${person.wiki}" class="data">${person.wiki}</a>
+                        <a href="${person.wiki}" class="data">"http://starwars.wikia.com"</a>
                         <div class="personaUnit id="personaModal">                             
                             <img src="${person.image}"
                                 alt="${person.id}">               
