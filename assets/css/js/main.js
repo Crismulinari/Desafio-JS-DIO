@@ -49,8 +49,8 @@ function loadPersonItens(offset, limit){
                 <div id="${person.id}SummaryModal" class="ebcf_modal">
                     <div class="ebcf_modal-content">
                         <span class="${person.id}ebcf_close">&times;</span>
-                        <div class="personaUnit id="personaModal">        
-                            <span class="name">${person.name}</span> 
+                        <span class="name">${person.name}</span>
+                        <div class="personaUnit id="personaModal">                             
                             <img src="${person.image}"
                                 alt="${person.id}">               
                             <div class="detail">

@@ -130,10 +130,12 @@ body{
     background-size: 100%;
     margin: auto;
     padding: 20px;      
-    width: 80%;
+    width: 70%;
     height: 100%;
     border-radius: 2px;
     cursor: pointer;
+    color: white;    
+    font-size: 1.5rem;
 }
 
 
@@ -154,20 +156,21 @@ body{
 }
 .personaUnit {
     display: flex;   
-    flex-direction: row; 
+    flex-direction: column; 
     align-items: center;
     justify-content: center;    
-    width: 80%;
-    height: 80%;        
+    width: 100%;
+    height: 70%;        
     margin: .5rem;
-    padding: 2rem 1rem;        
+    padding: 1rem;        
     font-size: 1.5rem;    
     color: white; 
     
 }
 .personaUnit img{
+    padding-top: 1rem;
     max-width: 140px;
-    height: 190px;
+    height: 150px;
     
 }
 .personaUnit .detail{
@@ -176,17 +179,16 @@ body{
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-between;
-    
+    justify-content: space-between;    
 }
 
-.personaUnit .detail .referens{
+.personaUnit .detail .referens{    
     padding: 0;
     margin: 0;
     list-style: none;
-    align-self: flex-end;
+      
 }
-.personaUnit .detail .referens .referen{
+.personaUnit .detail .referens .referen{   
    background-color: #3b3232;
    color: rgb(218, 196, 196);
    padding: .5rem 1rem;
