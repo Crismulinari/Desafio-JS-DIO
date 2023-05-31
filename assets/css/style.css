@@ -113,7 +113,7 @@ body{
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */
     padding-top: 100px; /* Location of the box */
-    left: 0;
+    left: 15%;
     top: 0;
     width: 70%; /* Full width */
     height: 100%; /* Full height */
@@ -127,7 +127,7 @@ body{
     display: flex;
     flex-direction: column;
     background-color: #3b3232;
-    background-image: url(../images/imperio.jpg);
+    background-image: url(../images/espaco2.jpg);
     background-size: 100%;
     margin: auto;
     padding: 10px;
